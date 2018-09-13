@@ -12,7 +12,7 @@ EOF
 
 sysctl -p
 
-########### Cấu hình SSH ##############
+########### Config SSH ##############
 
 echocolor "Config SSH log"
 
@@ -24,6 +24,16 @@ echo "local3.*                                                /var/log/ssh" >> /
 touch /var/log/ssh
 
 systemctl restart sshd
+systemctl restart rsyslog
+
+########### Config Log CMD ##############
+
+echo "export PROMPT_COMMAND='RETRN_VAL=$?;logger -p local6.debug -t bash "$(whoami) [$$]: $(history 1 | sed "s/^[ ]*[0-9]\+[ ]*//" ) [$RETRN_VAL]"'" >> /etc/bash.bashrc
+
+source /etc/bash.bashrc
+
+echo "local6.*                                                /var/log/cmdlog.log" >> /etc/rsyslog.conf
+touch /var/log/cmdlog.log
 systemctl restart rsyslog
 
 
