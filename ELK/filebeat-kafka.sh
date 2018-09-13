@@ -28,9 +28,11 @@ systemctl restart rsyslog
 
 ########### Config Log CMD ##############
 
-echo "export PROMPT_COMMAND='RETRN_VAL=$?;logger -p local6.debug -t bash "$(whoami) [$$]: $(history 1 | sed "s/^[ ]*[0-9]\+[ ]*//" ) [$RETRN_VAL]"'" >> /etc/bash.bashrc
+cat << 'EOF' >> ~/.bash_profile
+export PROMPT_COMMAND='RETRN_VAL=$?;logger -p local6.debug -t bash "$(whoami) [$$]: $(history 1 | sed "s/^[ ]*[0-9]\+[ ]*//" ) [$RETRN_VAL]"'
+EOF
 
-source /etc/bash.bashrc
+source ~/.bash_profile
 
 echo "local6.*                                                /var/log/cmdlog.log" >> /etc/rsyslog.conf
 touch /var/log/cmdlog.log
