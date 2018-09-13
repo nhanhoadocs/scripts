@@ -30,6 +30,8 @@ systemctl restart rsyslog
 
 cat ~/scripts/ELK/envcmd.txt >> ~/.bash_profile
 
+echo 'export HISTTIMEFORMAT="%d/%m/%y %T "' >> ~/.bash_profile
+
 source ~/.bash_profile
 
 echo "local6.*                                                /var/log/cmdlog.log" >> /etc/rsyslog.conf
