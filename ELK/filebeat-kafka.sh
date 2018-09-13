@@ -28,7 +28,7 @@ systemctl restart rsyslog
 
 ########### Config Log CMD ##############
 
-cat scripts/ELK/envcmd.txt >> ~/.bash_profile
+cat ~/scripts/ELK/envcmd.txt >> ~/.bash_profile
 
 source ~/.bash_profile
 
