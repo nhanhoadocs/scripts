@@ -28,9 +28,7 @@ systemctl restart rsyslog
 
 ########### Config Log CMD ##############
 
-cat << 'EOF' >> ~/.bash_profile
-export PROMPT_COMMAND='RETRN_VAL=$?;logger -p local6.debug -t bash "$(whoami) [$$]: $(history 1 | sed "s/^[ ]*[0-9]\+[ ]*//" ) [$RETRN_VAL]"'
-EOF
+cat scripts/ELK/envcmd.txt >> ~/.bash_profile
 
 source ~/.bash_profile
 
