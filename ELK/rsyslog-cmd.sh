@@ -21,7 +21,7 @@ echo '$DirCreateMode 0755'>>$path_rsyslog
 echo '$Umask 0022'>>$path_rsyslog
 
 cat >> /etc/rsyslog.conf << EOF
-auth,authpriv.*		-/var/log/auth.log
+auth,authpriv.*         -/var/log/auth.log
 daemon.*			-/var/log/daemon.log
 kern.*				-/var/log/kern.log
 cron.*				-/var/log/cron.log
