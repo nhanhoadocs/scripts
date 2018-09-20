@@ -162,7 +162,7 @@ systemctl start rsyslog.service
 
 # cmd log env
 
-echo "export PROMPT_COMMAND='RETRN_VAL=$?;logger -p local6.debug \"[\$(echo \$SSH_CLIENT | cut -d\" \" -f1)] # \$(history 1 | sed \"s/^[ ]*[0-9]\+[ ]*//\" )\"'" >> ~/.bashrc_profile
+echo "export PROMPT_COMMAND='RETRN_VAL=$?;logger -p local6.debug \"[\$(echo \$SSH_CLIENT | cut -d\" \" -f1)] # \$(history 1 | sed \"s/^[ ]*[0-9]\+[ ]*//\" )\"'" >> ~/.bash_profile
 
 touch cmdlog.log
 
@@ -216,7 +216,7 @@ cat > /etc/logrotate.d/syslog << EOF
 }
 EOF
 
-source ~/.bashrc_profile
+source ~/.bash_profile
 systemctl restart rsyslog
 
 #END Hardening Logrotate
