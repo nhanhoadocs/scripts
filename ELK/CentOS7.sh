@@ -217,7 +217,7 @@ cat > /etc/logrotate.d/syslog << EOF
 EOF
 
 source ~/.bashrc_profile
-systemctl resstart rsyslog
+systemctl restart rsyslog
 
 #END Hardening Logrotate
 
