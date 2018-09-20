@@ -10,6 +10,8 @@ echo "export PROMPT_COMMAND='RETRN_VAL=$?;logger -p local6.debug \"[\$(echo \$SS
 
 touch /var/log/cmdlog.log
 
+source ~/.bashrc_profile
+
 path_rsyslog=/etc/rsyslog.conf
 echo '$ModLoad imuxsock'>$path_rsyslog
 echo '$ModLoad imklog'>>$path_rsyslog
@@ -60,6 +62,6 @@ cat > /etc/logrotate.d/syslog << EOF
 }
 EOF
 
-source ~/.bashrc_profile
+
 
 #END Hardening Logrotate
