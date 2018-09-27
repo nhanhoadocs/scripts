@@ -28,7 +28,7 @@ systemctl restart rsyslog
 
 ########### Config Log CMD ##############
 
-cat ~/scripts/ELK/envcmd.txt >> ~/.bash_profile
+cat envcmd.txt >> ~/.bash_profile
 
 echo 'export HISTTIMEFORMAT="%d/%m/%y %T "' >> ~/.bash_profile
 
