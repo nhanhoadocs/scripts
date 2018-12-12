@@ -14,7 +14,6 @@ elif type lsb_release >/dev/null 2>&1; then
     VER=$(lsb_release -sr)
 elif [ -f /etc/lsb-release ]; then
     # Debian/Ubuntu without lsb_release
-    . /etc/lsb-release
     OS=$DISTRIB_ID
     VER=$DISTRIB_RELEASE
 elif [ -f /etc/debian_version ]; then
