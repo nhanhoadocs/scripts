@@ -11,3 +11,8 @@ curl -Lso- https://raw.githubusercontent.com/uncelvel/scripts/master/Utilities/c
 ```
 
 - Lưu ý: `<size>` chính là size swap (GB)
+
+## Benchmark
+```sh 
+curl -Lso- https://raw.githubusercontent.com/uncelvel/scripts/master/Utilities/bench_vm.sh | bash
+```
