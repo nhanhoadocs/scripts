@@ -14,7 +14,25 @@ DATE=`date '+%Y-%m-%d %H:%M:%S'`
 [[ $EUID -ne 0 ]] && echo -e "${RED}Error:${PLAIN} This script must be run as root!" && exit 1
 
 # install wget, fio and virt-what ioping nc fio 
-yum clean all > /dev/null 2>&1 && yum install -y epel-release > /dev/null 2>&1 && yum install -y wget fio virt-what fio ioping nc > /dev/null 2>&1 || (  apt-get update > /dev/null 2>&1 && apt-get install -y wget fio virt-what nc > /dev/null 2>&1 )
+if [ ! -e '/usr/bin/fio' ]; then 
+yum install -y fio || apt-get install -y fio 
+fi 
+
+if [ ! -e '/usr/bin/nc' ]; then 
+yum install -y nc || apt-get install -y nc
+fi 
+
+if [ ! -e '/usr/bin/ioping' ]; then 
+yum install -y ioping || apt-get install -y ioping
+fi 
+
+if [ ! -e '/usr/sbin/virt-what' ]; then 
+yum install -y virt-what || apt-get install -y virt-what
+fi 
+
+if [ ! -e '/usr/bin/wget' ]; then 
+yum install -y wget || apt-get install -y wget 
+fi 
 
 virtua=$(virt-what)
 
