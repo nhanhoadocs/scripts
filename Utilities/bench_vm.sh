@@ -7,6 +7,9 @@ GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
 PLAIN='\033[0m'
 
+# Date
+DATE=`date '+%Y-%m-%d %H:%M:%S'`
+
 # check root
 [[ $EUID -ne 0 ]] && echo -e "${RED}Error:${PLAIN} This script must be run as root!" && exit 1
 
@@ -154,6 +157,6 @@ test() {
 clear
 tmp=$(mktemp)
 test | tee $tmp
-(echo "curl -Lso- https://raw.githubusercontent.com/uncelvel/tunning/master/scripts/bench_vm.sh | bash" && cat $tmp) > result.log
+(echo "Benchmark time: $DATE" && echo "curl -Lso- https://raw.githubusercontent.com/uncelvel/scripts/master/Utilities/bench_vm.sh | bash" && cat $tmp) > result.log
 cat result.log | nc termbin.com 9999
 echo "-----------------------------------"
