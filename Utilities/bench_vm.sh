@@ -11,11 +11,7 @@ PLAIN='\033[0m'
 [[ $EUID -ne 0 ]] && echo -e "${RED}Error:${PLAIN} This script must be run as root!" && exit 1
 
 # install wget, fio and virt-what ioping nc fio 
-if  [ ! -e '/usr/bin/wget' ] || [ ! -e '/usr/bin/fio' ] ||  [ ! -e '/usr/sbin/virt-what' ]
-then
-	echo -e "Please wait..."
-	yum clean all > /dev/null 2>&1 && yum install -y epel-release > /dev/null 2>&1 && yum install -y wget fio virt-what fio ioping nc > /dev/null 2>&1 || (  apt-get update > /dev/null 2>&1 && apt-get install -y wget fio virt-what  > /dev/null 2>&1 )
-fi
+yum clean all > /dev/null 2>&1 && yum install -y epel-release > /dev/null 2>&1 && yum install -y wget fio virt-what fio ioping nc > /dev/null 2>&1 || (  apt-get update > /dev/null 2>&1 && apt-get install -y wget fio virt-what nc > /dev/null 2>&1 )
 
 virtua=$(virt-what)
 
