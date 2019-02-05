@@ -1,24 +1,26 @@
 # Sript Utilities
 
-## CMD_log (CentOS & Ubuntu)
+Các script được sử dụng bởi team RD - Nhân Hòa
+
+## 1. CMD_log (CentOS & Ubuntu)
 ```sh 
 curl -Lso- https://raw.githubusercontent.com/nhanhoadocs/scripts/master/Utilities/cmdlog.sh | bash
 ```
 
-## Create Swap
+## 2. Script tạo swap đối với các máy chủ linux
 ```sh 
 curl -Lso- https://raw.githubusercontent.com/nhanhoadocs/scripts/master/Utilities/create_swap.sh | bash -s <size>
 ```
 
 - Lưu ý: `<size>` chính là size swap (GB)
 
-## Benchmark
+## 3. Script dùng để benchmark IOPS và latencty của disk.
 
 ```sh 
 curl -Lso- https://raw.githubusercontent.com/nhanhoadocs/scripts/master/Utilities/bench_vm.sh | bash
 ```
 
-## Công cụ tra log đồng thời trên nhiều file
+## 4. Công cụ tra log đồng thời trên nhiều file
 
 Tải file `logview.sh`
 
