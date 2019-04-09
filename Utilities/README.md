@@ -33,3 +33,8 @@ Thực thi lệnh với các tùy chọn
 - Tùy chọn chỉ xem các dòng có từ ERROR: `bash logview.sh ERROR`
 - Tùy chọn xem các dòng có từ ERROR hoặc WARNING: `bash logview.sh "ERROR|Warning"`
 
+## 5. Force update time Linux 
+
+```sh
+sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
+```
