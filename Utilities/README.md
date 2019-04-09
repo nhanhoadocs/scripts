@@ -38,3 +38,14 @@ Thực thi lệnh với các tùy chọn
 ```sh
 sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
 ```
+
+## 6. Test SMTP
+
+```sh
+wget -O https://raw.githubusercontent.com/nhanhoadocs/scripts/master/Utilities/smtp_test.py smtp_test.py
+```
+
+Example: 
+```sh 
+python smtptest.py --debuglevel 1 --usetls --port=2525 -u demo1  -p bjY0MHQ0NW**** "CanhDX <canhdx@cloudchuanchi.com>" canhdx@nhanhoa.com.vn mail.smtp2go.com
+```
