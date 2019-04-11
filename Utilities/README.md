@@ -49,3 +49,14 @@ Example:
 ```sh 
 python smtptest.py --debuglevel 1 --usetls --port=2525 -u demo1  -p bjY0MHQ0NW**** "CanhDX <canhdx@cloudchuanchi.com>" canhdx@nhanhoa.com.vn mail.smtp2go.com
 ```
+
+## 7. Cài đặt collector sidecard cho các node compute. Graylog phiên bản 2.5
+
+```
+yum install wget -y
+wget https://raw.githubusercontent.com/nhanhoadocs/scripts/master/Utilities/graylog-collector-sidecar.sh
+chmod +x graylog-collector-sidecar.sh 
+bash graylog-collector-sidecar.sh 
+```
+
+Ví dụ:
