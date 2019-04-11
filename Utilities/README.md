@@ -60,5 +60,3 @@ wget https://raw.githubusercontent.com/nhanhoadocs/scripts/master/Utilities/gray
 chmod +x graylog-collector-sidecar.sh 
 bash graylog-collector-sidecar.sh 
 ```
-
-Ví dụ:

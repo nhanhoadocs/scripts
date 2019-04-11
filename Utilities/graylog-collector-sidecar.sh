@@ -10,7 +10,7 @@
 ## R&D - Clou365 - Nhân Hòa.
 
 read -p "Graylog Server IP Address: " IP_GRAYLOG_SERVER
-read -p "Graylog Server IP Address: " IP_GRAYLOG_CLIENT
+read -p "IP Address Client: " IP_GRAYLOG_CLIENT
 echo "Tai cac goi bo tro va bo cai cua collector-sidecar"
 sleep 3
 
