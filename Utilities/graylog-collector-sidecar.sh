@@ -2,15 +2,16 @@
 
 ## Ngày: 11.04.2019
 ## Script cài đặt collector-sidecar cho các node compute đối với Graylog 2.5
-## Cách thực hiện
+## Cách thực hiện: Tải script, phân quyền và chạy. Nhập các tham số khi được hỏi từ màn hình.
+### wget https://raw.githubusercontent.com/nhanhoadocs/scripts/master/Utilities/graylog-collector-sidecar.sh
+### chmod +x graylog-collector-sidecar.sh
+### bash graylog-collector-sidecar.sh
 ## R&D - Clou365 - Nhân Hòa.
 
 read -p "Graylog Server IP Address: " IP_GRAYLOG_SERVER
 read -p "Graylog Server IP Address: " IP_GRAYLOG_CLIENT
 echo "Tai cac goi bo tro va bo cai cua collector-sidecar"
 sleep 3
-
-
 
 yum install wget -y
 wget https://github.com/Graylog2/collector-sidecar/releases/download/0.1.8/collector-sidecar-0.1.8-1.x86_64.rpm
@@ -45,4 +46,11 @@ backends:
       configuration_path: /etc/graylog/collector-sidecar/generated/filebeat.yml
 EOF
 
+graylog-collector-sidecar -service install
+systemctl start collector-sidecar
+systemctl enable collector-sidecar
+systemctl status collector-sidecar
+
+
+echo "I.A.OK"
 
