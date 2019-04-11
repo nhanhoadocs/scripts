@@ -52,6 +52,8 @@ python smtptest.py --debuglevel 1 --usetls --port=2525 -u demo1  -p bjY0MHQ0NW**
 
 ## 7. Cài đặt collector sidecard cho các node compute. Graylog phiên bản 2.5
 
+Thực hiện tải script và nhập các tham số theo thông báo:
+
 ```
 yum install wget -y
 wget https://raw.githubusercontent.com/nhanhoadocs/scripts/master/Utilities/graylog-collector-sidecar.sh
