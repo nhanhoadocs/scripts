@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ ! -f /tmp/zmcat ]; then
+status=0
+statustext="OK"
+else
+status=2
+statustext="Ton tai file zmcat"
+fi
+
+echo "$status zmcat varname=2;crit $statustext"
