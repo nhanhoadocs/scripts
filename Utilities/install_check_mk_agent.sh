@@ -19,7 +19,7 @@ sudo systemctl enable xinetd
 # wget http://$IP_CHECK_MK_SERVER/managed/check_mk/agents/check-mk-agent-1.5.0p2-1.noarch.rpm
 
 ## Duong dan danh cho check_mk managed
-https://ms.cloud365.vn/managed/check_mk/agents/check-mk-agent-1.5.0p16-1.noarch.rpm
+wget https://ms.cloud365.vn/managed/check_mk/agents/check-mk-agent-1.5.0p16-1.noarch.rpm
 
 sudo rpm -ivh check-mk-agent-*
 
