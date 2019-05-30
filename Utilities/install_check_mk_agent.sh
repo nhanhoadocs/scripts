@@ -16,7 +16,11 @@ sudo yum install -y xinetd
 sudo systemctl start xinetd
 sudo systemctl enable xinetd
 
-wget http://$IP_CHECK_MK_SERVER/admin/check_mk/agents/check-mk-agent-1.5.0p2-1.noarch.rpm
+# wget http://$IP_CHECK_MK_SERVER/managed/check_mk/agents/check-mk-agent-1.5.0p2-1.noarch.rpm
+
+## Duong dan danh cho check_mk managed
+https://ms.cloud365.vn/managed/check_mk/agents/check-mk-agent-1.5.0p16-1.noarch.rpm
+
 sudo rpm -ivh check-mk-agent-*
 
 echo "######################################"
@@ -33,7 +37,7 @@ echo "Tai inventory"
 echo "######################################"
 sleep 3
 
-wget -O /usr/lib/check_mk_agent/local/mk_inventory  http://$IP_CHECK_MK_SERVER/admin/check_mk/agents/plugins/mk_inventory.linux
-chmod +x /usr/lib/check_mk_agent/local/mk_inventory  
+# wget -O /usr/lib/check_mk_agent/local/mk_inventory  http://$IP_CHECK_MK_SERVER/admin/check_mk/agents/plugins/mk_inventory.linux
+# chmod +x /usr/lib/check_mk_agent/local/mk_inventory  
 
 echo "Hoan tat"
