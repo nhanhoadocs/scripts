@@ -4,9 +4,9 @@
 
 - Bước 2: Download script và file run về
 ```sh
-wget https://github.com/anhtuan204/ghichep/blob/master/TuanDA/script/CVE2019-0708/rdesktop?raw=true && mv rdesktop?raw=true rdesktop
+wget https://github.com/nhanhoadocs/scripts/blob/master/Utilities/CVE2019-0708/rdesktop?raw=true && mv rdesktop?raw=true rdesktop
 
-wget https://raw.githubusercontent.com/anhtuan204/ghichep/master/TuanDA/script/CVE2019-0708/scan-2019-0708.sh
+wget https://raw.githubusercontent.com/nhanhoadocs/scripts/master/Utilities/CVE2019-0708/scan-2019-0708.sh
 ```
 
 - Bước 3: Edit lại thông số network và port
