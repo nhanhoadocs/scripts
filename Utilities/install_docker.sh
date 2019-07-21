@@ -3,9 +3,9 @@
 ## Scrip cai dat docker, docker-compose tren CentOS 7
 ## Cach thuc hien 
 ### yum install wget -y
-### wget https://raw.githubusercontent.com/nhanhoadocs/scripts/master/Utilities/install-docker.sh
-### chmod +x install-docker.sh
-### bash install-docker.sh
+### wget https://raw.githubusercontent.com/nhanhoadocs/scripts/master/Utilities/install_docker.sh
+### chmod +x install_docker.sh
+### bash install_docker.sh
 ##@@@@
 
 echo "Cai dat cac pham mem tien ich"

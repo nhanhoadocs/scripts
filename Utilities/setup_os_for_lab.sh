@@ -3,9 +3,9 @@
 ## Scrip thiet lap co ban cho moi truong lab CentOS 7
 ## Cach thuc hien 
 ### yum install wget -y
-### wget https://raw.githubusercontent.com/nhanhoadocs/scripts/master/Utilities/setup-os-for-lab.sh
-### chmod +x install-docker.sh
-### bash install-docker.sh
+### wget https://raw.githubusercontent.com/nhanhoadocs/scripts/master/Utilities/setup_os_for_lab.sh
+### chmod +x setup_os_for_lab.sh
+### bash setup_os_for_lab.sh
 ##@@@@
 
 echo "Thuc hien update OS, vo hieu hoa firewald, cai cac goi can thiet"
