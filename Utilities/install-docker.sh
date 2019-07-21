@@ -1,4 +1,13 @@
 #!/bin/bash
+##@@@@
+## Scrip cai dat docker, docker-compose
+## Cach thuc hien
+## Tai file bash ve may can cai dat  va thuc thi
+### wget https://raw.githubusercontent.com/nhanhoadocs/scripts/master/Utilities/install-docker.sh
+### chmod +x install-docker.sh
+### bash install-docker.sh
+##@@@@
+
 
 echo "Cai dat cac pham mem tien ich"
 sleep 3
@@ -25,6 +34,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 echo "Kiem tra phien ban docker-compose"
+sleep 3
 docker-compose -v
 
-
+echo "I.A.OK"
