@@ -2,12 +2,10 @@
 ##@@@@
 ## Scrip cai dat docker, docker-compose
 ## Cach thuc hien
-## Tai file bash ve may can cai dat  va thuc thi
 ### wget https://raw.githubusercontent.com/nhanhoadocs/scripts/master/Utilities/install-docker.sh
 ### chmod +x install-docker.sh
 ### bash install-docker.sh
 ##@@@@
-
 
 echo "Cai dat cac pham mem tien ich"
 sleep 3
