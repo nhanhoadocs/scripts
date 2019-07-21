@@ -8,6 +8,9 @@
 ### bash install-docker.sh
 ##@@@@
 
+echo "Thuc hien update OS, vo hieu hoa firewald, cai cac goi can thiet"
+sleep 3
+
 yum update -y 
 yum install epel-release
 yum update -y
@@ -16,3 +19,5 @@ sudo systemctl disable firewalld
 sudo systemctl stop firewalld
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
+
+echo "I.AM.OK"
