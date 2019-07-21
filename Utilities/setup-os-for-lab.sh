@@ -12,9 +12,9 @@ echo "Thuc hien update OS, vo hieu hoa firewald, cai cac goi can thiet"
 sleep 3
 
 yum update -y 
-yum install epel-release
+yum install-y epel-release
 yum update -y
-yum install wget byobu vim git 
+yum install -y wget byobu vim git 
 sudo systemctl disable firewalld
 sudo systemctl stop firewalld
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
