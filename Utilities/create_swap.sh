@@ -11,8 +11,7 @@ if [ $# -eq 0 ]
 fi
 
 function sw_u {
-    fallocate -l "$size"G /swapfile
-    #sudo dd if=/dev/zero of=/swapfile count=2048 bs=1MiB
+    dd if=/dev/zero of=/swapfile bs="$size" count=0 seek=1G 
     ls -lh /swapfile
     sudo chmod 600 /swapfile
     sudo mkswap /swapfile
@@ -26,19 +25,14 @@ function sw_u {
 }
 
 function sw_c {
-    # Tao swapfile
-    fallocate -l "$size"G /swapfile
+    dd if=/dev/zero of=/swapfile bs="$size" count=0 seek=1G 
     chmod 600 /swapfile
     mkswap /swapfile
     swapon /swapfile
     swapon --show
     sleep 3
-    # Chinh sua de luu cau hinh khi reboot
     cp /etc/{fstab,fstab.bk}
-    echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab
-    # echo "vm.swappiness=10" >> /etc/sysctl.conf
-    # echo "vm.vfs_cache_pressure = 50" >> /etc/sysctl.conf
-    # sysctl -p
+    echo '/swapfile swap swap sw 0 0' | tee -a /etc/fstab
     free -m
     echo "DONE"
 }
