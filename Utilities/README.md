@@ -4,7 +4,7 @@ Các script được sử dụng bởi team RD - Nhân Hòa
 
 ## 1. CMD_log (CentOS & Ubuntu)
 ```sh 
-curl -Lso- https://raw.githubusercontent.com/nhanhoadocs/scripts/master/Utilities/cmdlog.sh | bash
+curl -Lso- https://raw.githubusercontent.com/nhanhoadocs/ghichep-cmdlog/master/cmdlog.sh | bash
 ```
 
 ## 2. Script tạo swap đối với các máy chủ linux
